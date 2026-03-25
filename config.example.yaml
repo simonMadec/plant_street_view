@@ -1,0 +1,42 @@
+# Copy to config.yaml and set your API keys (config.yaml is gitignored).
+
+fetch:
+  step_size: 0.1
+  site: "kika2"
+  
+  bbox:
+    saintpierre:
+      min_lat: -21.20
+      max_lat: -20.40
+      min_lon: 55.4
+      max_lon: 55.5
+    reunion:
+      min_lat: -21.45
+      max_lat: -20.85
+      min_lon: 55.2
+      max_lon: 55.9
+    martinique:
+      min_lat: 14.5
+      max_lat: 14.7
+      min_lon: -61
+      max_lon: -60.5
+    kika:
+      min_lat: 9.277486
+      max_lat: 9.350666
+      min_lon: 2.723494
+      max_lon: 2.799797
+    kika2:
+      min_lat: 9.277486
+      max_lat: 9.350666
+      min_lon: 2.6813421
+      max_lon: 2.799797
+
+  mapillary:
+    api_key: "YOUR_MAPILLARY_TOKEN"
+    MAX_RETRIES: 3
+    TIMEOUT: 20
+    DELAY: 0.2
+
+plantnet:
+  api_key: "YOUR_PLANTNET_API_KEY"
+  chunk_size: 100

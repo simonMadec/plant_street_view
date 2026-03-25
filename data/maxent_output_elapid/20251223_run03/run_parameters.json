@@ -1,0 +1,57 @@
+{
+  "timestamp": "2025-12-23T13:57:01.247569",
+  "config": {
+    "input": {
+      "csv_path": "/data/data2/plant_street_view/images_kika/images_projected_metadata_kika.csv"
+    },
+    "processing": {
+      "lateral_offset_distance_m": 30.0,
+      "plantnet_threshold": 0.1,
+      "maxent_threshold": 0.2
+    },
+    "maxent": {
+      "run_maxent": true,
+      "n_background": 50,
+      "beta_lqp": 0.757,
+      "beta_categorical": 0.464,
+      "beta_threshold": 1.89,
+      "beta_hinge": 0.5,
+      "species_list": [
+        "Tectona grandis",
+        "Mangifera indica",
+        "Piliostigma thonningii",
+        "Parkia biglobosa",
+        "Anacardium occidentale"
+      ],
+      "environmental_layers_dir": "/data/data2/plant_street_view/images_kika/alphaearth/",
+      "output_dir": "./data/maxent_output_elapid",
+      "raster_files_pattern": "./data/maxent_output_elapid/*_prediction.tif"
+    },
+    "output": {
+      "filtered_csv_path": "./data/filtered_detections_kika.csv",
+      "create_visualization": true,
+      "visualization_path": "./data/visualization_kika.html"
+    },
+    "logging": {
+      "level": "INFO"
+    }
+  },
+  "maxent": {
+    "species_list": [
+      "Tectona grandis",
+      "Mangifera indica",
+      "Piliostigma thonningii",
+      "Parkia biglobosa",
+      "Anacardium occidentale"
+    ],
+    "environmental_layers_dir": "/data/data2/plant_street_view/images_kika/alphaearth/",
+    "base_output_dir": "./data/maxent_output_elapid",
+    "run_output_dir": "data/maxent_output_elapid/20251223_run03",
+    "n_background": 50,
+    "beta_lqp": 0.757,
+    "beta_hinge": 0.5,
+    "beta_threshold": 1.89,
+    "beta_categorical": 0.464,
+    "maxent_threshold": 0.2
+  }
+}

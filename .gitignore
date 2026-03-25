@@ -1,0 +1,96 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# --- Secrets & local config ---
+.env
+.env.*
+!.env.example
+
+# Contains API keys; commit config.example.yaml without secrets instead
+config.yaml
+
+# --- OS & editors ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+#old files
+old/
+
+# --- Project outputs & logs ---
+results/
+logs/
+*.log
+
+# Pipeline CSV outputs (large / regenerable)
+final_results*.csv
+mapillary_data*.csv
+final_results_step_*.csv
+plantnet_stats.json
+kika_images_metadata.csv
+
+# Depth maps & arrays
+saved_depth_maps/
+*.npy
+*.png
+*.jpg
+*.jpeg
+*.tiff
+*.tif
+*.webp
+*.gif
+*.bmp
+*.ico
+
+# Downloaded models / checkpoints (if stored under repo)
+models/
+checkpoints/
+clay*/
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Optional large local image trees (uncomment if under repo)
+# images_kika/
+# photosphere/
+# projected_views/

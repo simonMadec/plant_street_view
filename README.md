@@ -10,6 +10,7 @@ Scripts for Mapillary coverage, 360° panos → perspective crops, PlantNet IDs,
 | Run location | Most scripts assume the working directory is this folder so `utils.*` imports resolve. |
 
 ## Main entry points
+
 | Script | What it does |
 |--------|----------------|
 | `main.py` | Gridded Mapillary Graph API fetch → `mapillary_data_{site}.csv` → PlantNet on thumbnail URLs → CSV + Plotly map. Does not download full panos. |
@@ -33,9 +34,17 @@ Scripts for Mapillary coverage, 360° panos → perspective crops, PlantNet IDs,
 | Script | Role |
 |--------|------|
 | `stat.py` | Score thresholds, species counts from a projected metadata CSV. |
+| `compare_csvs.py` / `compare_projected_views.py` | Diff CSVs or two `projected_views` trees. |
+| `check_projected_metadata.py` | Row/column/path checks on one CSV. |
 | `depthstat.py` | Histograms over all depth `.npy` files in a folder. |
 | `pca_embedding.py` | PCA on raster embeddings at in-situ points (GeoJSON + rasters). |
 
 ## Other
-| `notebook/` |  notebooks;  |
 
+| Path | Note |
+|------|------|
+| `data/insitu/process.py` | Shapefile → GeoJSON with class labels from `nomenclature.csv`. |
+| `notebook/` | Older notebooks; not required for the CLI scripts. |
+| `old/` | Archived one-offs; ignore unless you need history. |
+
+No single `requirements.txt` here—dependencies vary by script (e.g. `requests`, `pandas`, `torch`+MoGe for depth, `elapid`/`rasterio` for Benin). Install what you use.
